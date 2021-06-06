@@ -52,6 +52,8 @@ sk_path = 'your sk path'
 
 #### 登陆
 
++ 访问http://ip:port/login.php
+
 + 输入用户名密码登陆
 
 
