@@ -223,7 +223,7 @@
 
 
 										<td style="display: table-cell; vertical-align: middle;" id="fattr"></td>
-										<td style="display: table-cell; vertical-align: middle;" id="fpath" class="hidden-480">－
+										<td style="display: table-cell; vertical-align: middle;" id="fpath" class="hidden-480"  href=''>－
 										</td>
 
 										<td style="display: table-cell; vertical-align: middle;" id="fbus" >
@@ -409,6 +409,12 @@
 		// 显示
 		jQuery(function ($) {
 			$(document).ready(function(){ 
+				var row = $("#template").clone();
+							row.find("#fname").text("a");
+							row.find("#fattr").text("item.attr");
+							row.find("#fpath").text("下载").wrapInner("<a href='www.baidu.com'></a>");
+							row.attr("id","ready");
+							row.appendTo("#tbody_list");
 
 				$.ajax({
 					type: "get",
@@ -420,7 +426,7 @@
 							var row = $("#template").clone();
 							row.find("#fname").text(item.name);
 							row.find("#fattr").text(item.attr);
-							row.find("#fpath").text(item.path);
+							row.find("#fpath").text("下载").wrapInner("<a href='"+item.path+"'></a>");
 							row.attr("id","ready");
 							row.appendTo("#tbody_list");
 						})
