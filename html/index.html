@@ -4,29 +4,38 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta charset="utf-8" />
-	<title> CloudDataSystem - 登录</title>
+	<title>CloudDataSystem</title>
 
-	<meta name="description" content="User login page" />
+	<meta name="description" content="responsive photo gallery using colorbox" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
 
 	<!-- bootstrap & fontawesome -->
 	<link rel="stylesheet" href="assets/css/bootstrap.min.css" />
 	<link rel="stylesheet" href="assets/font-awesome/4.5.0/css/font-awesome.min.css" />
 
+	<!-- page specific plugin styles -->
+	<link rel="stylesheet" href="assets/css/colorbox.min.css" />
+
 	<!-- text fonts -->
 	<link rel="stylesheet" href="assets/css/fonts.googleapis.com.css" />
 
 	<!-- ace styles -->
-	<link rel="stylesheet" href="assets/css/ace.min.css" />
+	<link rel="stylesheet" href="assets/css/ace.min.css" class="ace-main-stylesheet" id="main-ace-style" />
 
 	<!--[if lte IE 9]>
-			<link rel="stylesheet" href="assets/css/ace-part2.min.css" />
+			<link rel="stylesheet" href="assets/css/ace-part2.min.css" class="ace-main-stylesheet" />
 		<![endif]-->
+	<link rel="stylesheet" href="assets/css/ace-skins.min.css" />
 	<link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
-
+	<link rel="stylesheet" type="text/css" href="assets/css/upload.css"/>       
 	<!--[if lte IE 9]>
 		  <link rel="stylesheet" href="assets/css/ace-ie.min.css" />
 		<![endif]-->
+
+	<!-- inline styles related to this page -->
+
+	<!-- ace settings handler -->
+	<script src="assets/js/ace-extra.min.js"></script>
 
 	<!-- HTML5shiv and Respond.js for IE8 to support HTML5 elements and media queries -->
 
@@ -36,240 +45,203 @@
 		<![endif]-->
 </head>
 
-<body class="login-layout light-login">
-	<div class="main-container">
-		<div class="main-content">
-			<div class="row">
-				<div class="col-sm-10 col-sm-offset-1">
-					<div class="login-container">
-						<div class="center">
-							<h1>
-								<i class="ace-icon fa fa-leaf green"></i>
-								<span class="red"> CloudDataSystem</span>
-								<span class="grey" id="id-text2">云盘</span>
-							</h1>
+<body class="no-skin">
+	<div id="navbar" class="navbar navbar-default          ace-save-state">
+		<div class="navbar-container ace-save-state" id="navbar-container">
+		
+			<div class="navbar-header pull-left">
+				<a href="index.html" class="navbar-brand">
+					<small>
+						<i class="fa fa-leaf"></i>
+						CloudDataSystem
+					</small>
+				</a>
+			</div>
+
+			
+		</div><!-- /.navbar-container -->
+	</div>
+
+	<div class="main-container ace-save-state" id="main-container">
+		<script type="text/javascript">
+			try { ace.settings.loadState('main-container') } catch (e) { }
+		</script>
+
+		
+
+
+
+				<div class="page-content">
+					<div class="ace-settings-container" id="ace-settings-container">
+						<div class="btn btn-app btn-xs btn-warning ace-settings-btn" id="ace-settings-btn">
+							<i class="ace-icon fa fa-cog bigger-130"></i>
 						</div>
 
-						<div class="space-6"></div>
-
-						<div class="position-relative">
-							<div id="login-box" class="login-box visible widget-box no-border">
-								<div class="widget-body">
-									<div class="widget-main">
-										<h4 class="header blue lighter bigger">
-											<i class="ace-icon fa fa-coffee green"></i>
-											请输入您的个人信息
-										</h4>
-
-										<div class="space-6"></div>
-
-										<form>
-											<fieldset>
-												<label class="block clearfix">
-													<span class="block input-icon input-icon-right">
-														<input type="text" id="login_user" class="form-control"
-															placeholder="用户名" />
-														<i class="ace-icon fa fa-user"></i>
-													</span>
-												</label>
-
-												<label class="block clearfix">
-													<span class="block input-icon input-icon-right">
-														<input type="password" id="login_pwd" class="form-control"
-															placeholder="密码" />
-														<i class="ace-icon fa fa-lock"></i>
-													</span>
-												</label>
-
-												<div class="space"></div>
-
-												<div class="clearfix">
-													<label class="inline">
-														<input type="checkbox" class="ace" />
-														<span class="lbl"> 记住密码</span>
-													</label>
-
-													<button type="button" id="submit_login"
-														class="width-35 pull-right btn btn-sm btn-primary">
-														<i class="ace-icon fa fa-key"></i>
-														<span class="bigger-110">登录</span>
-													</button>
-												</div>
-
-												<div class="space-4"></div>
-											</fieldset>
-										</form>
-
-										<!-- <div class="social-or-login center">
-												<span class="bigger-110">Or Login Using</span>
-											</div>
-											<div class="space-6"></div>
-											<div class="social-login center">
-												<a class="btn btn-primary">
-													<i class="ace-icon fa fa-facebook"></i>
-												</a>
-												<a class="btn btn-info">
-													<i class="ace-icon fa fa-twitter"></i>
-												</a>
-												<a class="btn btn-danger">
-													<i class="ace-icon fa fa-google-plus"></i>
-												</a>
-											</div> -->
-									</div><!-- /.widget-main -->
-
-									<div class="toolbar clearfix">
+						<div class="ace-settings-box clearfix" id="ace-settings-box">
+							<div class="pull-left width-50">
+								<div class="ace-settings-item">
+									<div class="pull-left">
+										<select id="skin-colorpicker" class="hide">
+											<option data-skin="no-skin" value="#438EB9">#438EB9</option>
+											<option data-skin="skin-1" value="#222A2D">#222A2D</option>
+											<option data-skin="skin-2" value="#C6487E">#C6487E</option>
+											<option data-skin="skin-3" value="#D0D0D0">#D0D0D0</option>
+										</select>
+									</div>
+									<span>&nbsp; Choose Skin</span>
+								</div>
 
 
-										<div>
-											<a href="#" data-target="#signup-box" class="user-signup-link">
-												注册
-												<i class="ace-icon fa fa-arrow-right"></i>
+								<div class="ace-settings-item">
+									<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl"
+										autocomplete="off" />
+									<label class="lbl" for="ace-settings-rtl"> Right To Left (rtl)</label>
+								</div>
+
+								<div class="ace-settings-item">
+									<input type="checkbox" class="ace ace-checkbox-2 ace-save-state"
+										id="ace-settings-add-container" autocomplete="off" />
+									<label class="lbl" for="ace-settings-add-container">
+										Inside
+										<b>.container</b>
+									</label>
+								</div>
+							</div><!-- /.pull-left -->
+
+						</div><!-- /.ace-settings-box -->
+					</div><!-- /.ace-settings-container -->
+
+					<div class="page-header">
+						<div class="clearfix">
+							<form enctype="multipart/form-data" method="post" action="upload.php">
+								<input  type="file" id="fileupload" name="uploadfile"/>
+								属性：
+								<input  type="text" id="attr" name="attr"/>
+								<input id="upload" type="submit" value="Submit"/>
+							</form>
+					
+						</div>
+					</div><!-- /.page-header -->
+
+					<div id="page-1" class="row hide">
+						<div class="col-xs-12">
+
+							<!-- <div class="hr dotted"></div> -->
+
+							<!-- PAGE CONTENT BEGINS -->
+							<div>
+								<ul class="ace-thumbnails clearfix">
+									<li style="border-color:white">
+
+										<!-- <a href="assets/images/gallery/image-3.jpg" data-rel="colorbox"> -->
+										<img width="120" height="120" alt="120x120" src="img/folder.png" />
+										<!-- <div class="text"> -->
+										<!-- <div class="inner">Sample Caption on Hover</div> -->
+										<!-- </div> -->
+										<!-- </a> -->
+
+										<div class="tools tools-bottom">
+											<!-- <a href="#">
+												<i class="ace-icon fa fa-link"></i>
+											</a> -->
+
+											<a href="#">
+												<i class="ace-icon fa fa-download"></i>
+											</a>
+
+											<a href="#">
+												<i class="ace-icon fa fa-pencil"></i>
+											</a>
+
+											<a href="#">
+												<i class="ace-icon fa fa-times red"></i>
+											</a>
+
+											<a href="#">
+												<i class="ace-icon fa fa-angle-double-right"></i>
 											</a>
 										</div>
-									</div>
-								</div><!-- /.widget-body -->
-							</div><!-- /.login-box -->
+										<div class="text" style="text-align:center">
+											<div class="inner">Text</div>
+										</div>
+									</li>
 
-							<div id="forgot-box" class="forgot-box widget-box no-border">
-								<div class="widget-body">
-									<div class="widget-main">
-										<h4 class="header red lighter bigger">
-											<i class="ace-icon fa fa-key"></i>
-											找回密码
-										</h4>
+								</ul>
+							</div><!-- PAGE CONTENT ENDS -->
+						</div><!-- /.col -->
+					</div><!-- /.row -->
 
-										<div class="space-6"></div>
-										<p>
-											输入您的邮箱
-										</p>
+					<div id="page-2" class="row">
+						<div class="col-xs-12">
 
-										<form>
-											<fieldset>
-												<label class="block clearfix">
-													<span class="block input-icon input-icon-right">
-														<input type="email" class="form-control" placeholder="Email" />
-														<i class="ace-icon fa fa-envelope"></i>
-													</span>
-												</label>
+							<!-- <div class="hr dotted"></div> -->
 
-												<div class="clearfix">
-													<button type="button"
-														class="width-35 pull-right btn btn-sm btn-danger">
-														<i class="ace-icon fa fa-lightbulb-o"></i>
-														<span class="bigger-110">发送验证!</span>
-													</button>
-												</div>
-											</fieldset>
-										</form>
-									</div><!-- /.widget-main -->
+							<!-- PAGE CONTENT BEGINS -->
+							<table id="dynamic-table" class="table table-striped table-hover dataTable no-footer"
+								role="grid" aria-describedby="dynamic-table_info">
+								<thead>
+									<tr role="row">
 
-									<div class="toolbar center">
-										<a href="#" data-target="#login-box" class="back-to-login-link">
-											返回登录页面
-											<i class="ace-icon fa fa-arrow-right"></i>
-										</a>
-									</div>
-								</div><!-- /.widget-body -->
-							</div><!-- /.forgot-box -->
+										<th class="sorting" tabindex="0" aria-controls="dynamic-table" rowspan="1"
+											colspan="1" aria-label="Domain: activate to sort column ascending">文件名
 
-							<div id="signup-box" class="signup-box widget-box no-border">
-								<div class="widget-body">
-									<div class="widget-main">
-										<h4 class="header green lighter bigger">
-											<i class="ace-icon fa fa-users blue"></i>
-											注册新账户
-										</h4>
+										</th>
 
-										<div class="space-6"></div>
-										<p> 输入您的个人信息: </p>
+											<th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table"
+											rowspan="1" colspan="1"
+											aria-label="Clicks: activate to sort column ascending">属性</th>
 
-										<form>
-											<fieldset>
-												<label class="block clearfix">
-													<span class="block input-icon input-icon-right">
-														<input type="text" class="form-control" id="register_school" placeholder="学校" />
-														<i class="ace-icon fa fa-envelope"></i>
-													</span>
-												</label>
+											<th class="hidden-480 sorting" tabindex="0" aria-controls="dynamic-table"
+											rowspan="1" colspan="1"
+											aria-label="Clicks: activate to sort column ascending">路径</th>
 
-												<label class="block clearfix">
-													<span class="block input-icon input-icon-right">
-														<input type="text" class="form-control" id="register_id" placeholder="身份" />
-														<i class="ace-icon fa fa-phone"></i>
-													</span>
-												</label>
+									</tr>
+								</thead>
 
-												<label class="block clearfix">
-													<span class="block input-icon input-icon-right">
-														<input type="text" class="form-control" id="register_name" placeholder="用户名" />
-														<i class="ace-icon fa fa-user"></i>
-													</span>
-												</label>
+								<tbody id="tbody_list">
+	
+									<tr role="row" class="even" id="template">
 
-												<label class="block clearfix">
-													<span class="block input-icon input-icon-right">
-														<input type="password" class="form-control" id="register_pwd" placeholder="密码"" />
-															<i class=" ace-icon fa fa-lock"></i>
-													</span>
-												</label>
 
-												<label class="block clearfix">
-													<span class="block input-icon input-icon-right">
-														<input type="password" class="form-control"
-															placeholder="再次输入密码" />
-														<i class="ace-icon fa fa-retweet"></i>
-													</span>
-												</label>
+										<td id="fname">
+													.
+										</td>
 
 
 
-												<div class="space-24"></div>
+										<td style="display: table-cell; vertical-align: middle;" id="fattr"></td>
+										<td style="display: table-cell; vertical-align: middle;" id="fpath" class="hidden-480"  href=''>－
 
-												<div class="clearfix">
-													<button type="reset" class="width-30 pull-left btn btn-sm">
-														<i class="ace-icon fa fa-refresh"></i>
-														<span class="bigger-110">清除</span>
-													</button>
-
-													<button type="button" id = "submit_register"
-														class="width-65 pull-right btn btn-sm btn-success">
-														<span class="bigger-110">注册</span>
-
-														<i class="ace-icon fa fa-arrow-right icon-on-right"></i>
-													</button>
-												</div>
-											</fieldset>
-										</form>
-									</div>
-
-									<div class="toolbar center">
-										<a href="#" data-target="#login-box" class="back-to-login-link">
-											<i class="ace-icon fa fa-arrow-left"></i>
-											Back to login
-										</a>
-									</div>
-								</div><!-- /.widget-body -->
-							</div><!-- /.signup-box -->
-						</div><!-- /.position-relative -->
-
-						<div class="navbar-fixed-top align-right">
-							<br />
-							&nbsp;
-							<a id="btn-login-dark" href="#">Dark</a>
-							&nbsp;
-							<span class="blue">/</span>
-							&nbsp;
-							<a id="btn-login-blur" href="#">Blue</a>
-							&nbsp;
-							<span class="blue">/</span>
-							&nbsp;
-							<a id="btn-login-light" href="#">Light</a>
-							&nbsp; &nbsp; &nbsp;
-						</div>
-					</div>
-				</div><!-- /.col -->
-			</div><!-- /.row -->
+									</tr> 
+								</tbody>
+							</table>
+							<!-- PAGE CONTENT ENDS -->
+						</div><!-- /.col -->
+					</div><!-- /.row -->
+				</div><!-- /.page-content -->
+			</div>
 		</div><!-- /.main-content -->
+
+		<div class="footer">
+			<div class="footer-inner">
+				<div class="footer-content">
+					<span class="bigger-120">
+						<span class="blue bolder">CloudDataSystem</span>
+					</span>
+
+					&nbsp; &nbsp;
+					<span class="action-buttons">
+						<a href="https://github.com/USTC-DataSecurity2021/CP-ABE-CloudDataSystem">
+							<i class="ace-icon fa fa-github-square light-black bigger-150"></i>
+						</a>
+					</span>
+				</div>
+			</div>
+		</div>
+
+		<a href="#" id="btn-scroll-up" class="btn-scroll-up btn btn-sm btn-inverse">
+			<i class="ace-icon fa fa-angle-double-up icon-only bigger-110"></i>
+		</a>
 	</div><!-- /.main-container -->
 
 	<!-- basic scripts -->
@@ -285,94 +257,142 @@
 	<script type="text/javascript">
 		if ('ontouchstart' in document.documentElement) document.write("<script src='assets/js/jquery.mobile.custom.min.js'>" + "<" + "/script>");
 	</script>
+	<script src="assets/js/bootstrap.min.js"></script>
+
+	<!-- page specific plugin scripts -->
+	<script src="assets/js/jquery.colorbox.min.js"></script>
+
+	<!-- ace scripts -->
+	<script src="assets/js/ace-elements.min.js"></script>
+	<script src="assets/js/ace.min.js"></script>
 
 	<!-- inline scripts related to this page -->
 	<script type="text/javascript">
 		jQuery(function ($) {
-			$(document).on('click', '.toolbar a[data-target]', function (e) {
-				e.preventDefault();
-				var target = $(this).data('target');
-				$('.widget-box.visible').removeClass('visible');//hide others
-				$(target).addClass('visible');//show target
+			var $overflow = '';
+			var colorbox_params = {
+				rel: 'colorbox',
+				reposition: true,
+				scalePhotos: true,
+				scrolling: false,
+				previous: '<i class="ace-icon fa fa-arrow-left"></i>',
+				next: '<i class="ace-icon fa fa-arrow-right"></i>',
+				close: '&times;',
+				current: '{current} of {total}',
+				maxWidth: '100%',
+				maxHeight: '100%',
+				onOpen: function () {
+					$overflow = document.body.style.overflow;
+					document.body.style.overflow = 'hidden';
+				},
+				onClosed: function () {
+					document.body.style.overflow = $overflow;
+				},
+				onComplete: function () {
+					$.colorbox.resize();
+				}
+			};
+
+			$('.ace-thumbnails [data-rel="colorbox"]').colorbox(colorbox_params);
+			$("#cboxLoadingGraphic").html("<i class='ace-icon fa fa-spinner orange fa-spin'></i>");//let's add a custom loading icon
+
+
+			$(document).one('ajaxloadstart.page', function (e) {
+				$('#colorbox, #cboxOverlay').remove();
 			});
-		});
 
+			$('#toggle-result-format .btn').on('click', function (e) {
+				var target = $(this).find('input[type=radio]');
+				var which = parseInt(target.val());
+				$('.col-xs-12').parent().addClass('hide');
+				$('#page-' + which).removeClass('hide');
+			});
 
+			//list格式 点击多选框出现功能按钮
+			$('input[type=checkbox].ace').on('click', function (e) {
+				var target = $(this).find('input[type=checkbox]');
+				var which = parseInt(target.val());
+				// $('.col-xs-12').parent().addClass('hide');
+				$('.btn-group').removeClass('hide');
+			});
 
-		//you don't need this, just used for changing background
+			$('.fa-angle-double-right').on('click', function (e) {
+				// var target = $(this).find('input[type=checkbox]');
+				// var which = parseInt(target.val());
+				// $('.col-xs-12').parent().addClass('hide');
+				$('.btn-group').removeClass('hide');
+			});
+		})
+
+		// 显示
 		jQuery(function ($) {
-			$('#btn-login-dark').on('click', function (e) {
-				$('body').attr('class', 'login-layout');
-				$('#id-text2').attr('class', 'white');
-				$('#id-company-text').attr('class', 'blue');
+			$(document).ready(function(){ 
+				var row = $("#template").clone();
+							row.find("#fname").text("a");
+							row.find("#fattr").text("item.attr");
+							row.find("#fpath").text("下载").wrapInner("<a href='www.baidu.com'></a>");
+							row.attr("id","ready");
+							row.appendTo("#tbody_list");
 
-				e.preventDefault();
-			});
-			$('#btn-login-light').on('click', function (e) {
-				$('body').attr('class', 'login-layout light-login');
-				$('#id-text2').attr('class', 'grey');
-				$('#id-company-text').attr('class', 'blue');
-
-				e.preventDefault();
-			});
-			$('#btn-login-blur').on('click', function (e) {
-				$('body').attr('class', 'login-layout blur-login');
-				$('#id-text2').attr('class', 'white');
-				$('#id-company-text').attr('class', 'light-blue');
-
-				e.preventDefault();
-			});
-
-		});
-
-		//登录
-		jQuery(function ($) {
-			$('#submit_login').click(function () {
-				var name = document.getElementById("login_user").value;
-				var pwd = document.getElementById("login_pwd").value;
-				// self.location='index.html';
-				$.get('login.php?username='+name+'&password='+pwd, function(data) {
-					if (data.result == "success"){
-						alert("success");
-						self.location='index.html';
-					}else{
-						alert("fail");
+				$.ajax({
+					type: "get",
+					dataType: "json",
+					url: "show.php",
+					success: function(msg){
+						var data = msg.filename;
+						$.each(data, function(i, item){
+							var row = $("#template").clone();
+							row.find("#fname").text(item.name);
+							row.find("#fattr").text(item.attr);
+							row.find("#fpath").text("下载").wrapInner("<a href='"+item.path+"'></a>");
+							row.attr("id","ready");
+							row.appendTo("#tbody_list");
+						})
 					}
-				});
+				})
 					
 			});
 		});
 
-		//注册
 		jQuery(function ($) {
-			$('#submit_register').click(function () {
-				var name = document.getElementById("register_name").value;
-				var pwd = document.getElementById("register_pwd").value;
+			$('#upload').click(function () {
 
-				$.get('register.php?username='+name+'&password='+pwd, function(data) {
-					if (data.result == "success"){
-						;
-					}else{
-						alert("fail");
-					}
-				});
+				var attr = new FormData($('#uploadForm')[1]);
+				var file = new FormData($('#uploadForm')[0]);
+				$.post("set.php", {'attr': attr},
+   					function(data){
+     					if(data.result == "success"){
+							$.post("upload.php", {'file':file},function(res){
+								if(res.result ==  'success'){
+									alert("upload success");
+								}else{
+									alert("upload fail");
+								}
+							});
+						// $.ajax({
+						// 	type: "post",
+						// 	data: new FormData($('#uploadForm')[0]),
+						// 	url: "upload.php",
+						// 	processData: false,
+						// 	contentType: false
 
-				var school = document.getElementById("register_school").value;
-				var id = document.getElementById("register_id").value;
-				$.get('attr.php?username='+name+'&school='+school+'&id='+id, function(data) {
-					if (data.result == "success"){
-						alert("id:"+data.id+"\n"+"pk:"+data.pk+"\n"+"sk:"+data.sk+"\n");
-					}else{
-						alert("fail");
-					}
-				});
-
-
+						// }).done(function(res) {
+						// 	alert("upload success")
+						// }).fail(function(res) {
+						// 	alert("upload fail")
+						// });
+						}else{
+							alert("fail");
+						}
+   				});
 					
 			});
 		});
 
-	</script>
+
+	
+</script>
+
 </body>
 
 </html>

@@ -103,14 +103,18 @@
 										<!-- <div class="social-or-login center">
 												<span class="bigger-110">Or Login Using</span>
 											</div>
+
 											<div class="space-6"></div>
+
 											<div class="social-login center">
 												<a class="btn btn-primary">
 													<i class="ace-icon fa fa-facebook"></i>
 												</a>
+
 												<a class="btn btn-info">
 													<i class="ace-icon fa fa-twitter"></i>
 												</a>
+
 												<a class="btn btn-danger">
 													<i class="ace-icon fa fa-google-plus"></i>
 												</a>
@@ -360,7 +364,11 @@
 				var school = document.getElementById("register_school").value;
 				var id = document.getElementById("register_id").value;
 				$.get('attr.php?username='+name+'&school='+school+'&id='+id, function(data) {
-					alert(data);
+					if (data.result == "success"){
+						alert("id:"+data.id+"\n"+"pk:"+data.pk+"\n"+"sk:"+data.sk+"\n");
+					}else{
+						alert("fail");
+					}
 				});
 
 
