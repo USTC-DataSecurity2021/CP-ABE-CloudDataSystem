@@ -346,16 +346,15 @@
 			$('#submit_login').click(function () {
 				var name = document.getElementById("login_user").value;
 				var pwd = document.getElementById("login_pwd").value;
-
+				// self.location='index.html';
 				$.get('login.php?username='+name+'&password='+pwd, function(data) {
 					if (data.result == "success"){
 						alert("success");
+						self.location='index.html';
 					}else{
 						alert("fail");
 					}
 				});
-				
-
 					
 			});
 		});

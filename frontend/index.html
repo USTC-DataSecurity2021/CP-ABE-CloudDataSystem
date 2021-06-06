@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta charset="utf-8" />
-	<title>SecureCloud - 我的云盘</title>
+	<title>CloudDataSystem</title>
 
 	<meta name="description" content="responsive photo gallery using colorbox" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -48,69 +48,17 @@
 <body class="no-skin">
 	<div id="navbar" class="navbar navbar-default          ace-save-state">
 		<div class="navbar-container ace-save-state" id="navbar-container">
-			<button type="button" class="navbar-toggle menu-toggler pull-left" id="menu-toggler" data-target="#sidebar">
-				<span class="sr-only">Toggle sidebar</span>
-
-				<span class="icon-bar"></span>
-
-				<span class="icon-bar"></span>
-
-				<span class="icon-bar"></span>
-			</button>
-
+		
 			<div class="navbar-header pull-left">
 				<a href="index.html" class="navbar-brand">
 					<small>
 						<i class="fa fa-leaf"></i>
-						SecureCloud
+						CloudDataSystem
 					</small>
 				</a>
 			</div>
 
-			<div class="navbar-buttons navbar-header pull-right" role="navigation">
-				<ul class="nav ace-nav">
-
-
-
-					<li class="light-blue dropdown-modal">
-						<a data-toggle="dropdown" href="#" class="dropdown-toggle">
-							<img class="nav-user-photo" src="assets/images/avatars/user.jpg" alt="Jason's Photo" />
-							<span class="user-info">
-								<small>Welcome,</small>
-								Jason
-							</span>
-
-							<i class="ace-icon fa fa-caret-down"></i>
-						</a>
-
-						<ul
-							class="user-menu dropdown-menu-right dropdown-menu dropdown-yellow dropdown-caret dropdown-close">
-							<li>
-								<a href="#">
-									<i class="ace-icon fa fa-cog"></i>
-									Settings
-								</a>
-							</li>
-
-							<li>
-								<a href="profile.html">
-									<i class="ace-icon fa fa-user"></i>
-									Profile
-								</a>
-							</li>
-
-							<li class="divider"></li>
-
-							<li>
-								<a href="#">
-									<i class="ace-icon fa fa-power-off"></i>
-									Logout
-								</a>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			
 		</div><!-- /.navbar-container -->
 	</div>
 
@@ -119,84 +67,9 @@
 			try { ace.settings.loadState('main-container') } catch (e) { }
 		</script>
 
-		<div id="sidebar" class="sidebar                  responsive                    ace-save-state">
-			<script type="text/javascript">
-				try { ace.settings.loadState('sidebar') } catch (e) { }
-			</script>
-
-			<div class="sidebar-shortcuts" id="sidebar-shortcuts">
-				<div class="sidebar-shortcuts-large" id="sidebar-shortcuts-large">
-					<button class="btn btn-success" title="我的云盘">
-						<i class="ace-icon fa fa-cloud"></i>
-					</button>
-
-					<button class="btn btn-info" title="搜索资源">
-						<i class="ace-icon glyphicon glyphicon-search"></i>
-					</button>
-
-					<button class="btn btn-warning" title="我的好友">
-						<i class="ace-icon fa fa-users"></i>
-					</button>
-
-					<button class="btn btn-danger" title="设置">
-						<i class="ace-icon fa fa-cogs"></i>
-					</button>
-				</div>
-
-				<div class="sidebar-shortcuts-mini" id="sidebar-shortcuts-mini">
-					<span class="btn btn-success"></span>
-
-					<span class="btn btn-info"></span>
-
-					<span class="btn btn-warning"></span>
-
-					<span class="btn btn-danger"></span>
-				</div>
-			</div><!-- /.sidebar-shortcuts -->
-
-			<ul class="nav nav-list">
-				<li class="">
-					<button type="button" id = "display">
-					<a href="index.html">
-						<i class="menu-icon fa fa-book"></i>
-						<span class="menu-text"> 全部文件 </span>
-					
-					</a>
-				</button>
-				
-					<b class="arrow"></b>
-				</li>
+		
 
 
-			</ul><!-- /.nav-list -->
-
-			<div class="sidebar-toggle sidebar-collapse" id="sidebar-collapse">
-				<i id="sidebar-toggle-icon" class="ace-icon fa fa-angle-double-left ace-save-state"
-					data-icon1="ace-icon fa fa-angle-double-left" data-icon2="ace-icon fa fa-angle-double-right"></i>
-			</div>
-		</div>
-
-		<div class="main-content">
-			<div class="main-content-inner">
-				<div class="breadcrumbs ace-save-state" id="breadcrumbs">
-					<ul class="breadcrumb">
-						<li>
-							<i class="ace-icon fa fa-home home-icon"></i>
-							<a href="#">我的网盘</a>
-						</li>
-						<!-- <li class="active">Gallery</li> -->
-					</ul><!-- /.breadcrumb -->
-
-					<div class="nav-search" id="nav-search">
-						<form class="form-search">
-							<span class="input-icon">
-								<input type="text" placeholder="Search ..." class="nav-search-input"
-									id="nav-search-input" autocomplete="off" />
-								<i class="ace-icon fa fa-search nav-search-icon"></i>
-							</span>
-						</form>
-					</div><!-- /.nav-search -->
-				</div>
 
 				<div class="page-content">
 					<div class="ace-settings-container" id="ace-settings-container">
@@ -218,23 +91,6 @@
 									<span>&nbsp; Choose Skin</span>
 								</div>
 
-								<div class="ace-settings-item">
-									<input type="checkbox" class="ace ace-checkbox-2 ace-save-state"
-										id="ace-settings-navbar" autocomplete="off" />
-									<label class="lbl" for="ace-settings-navbar"> Fixed Navbar</label>
-								</div>
-
-								<div class="ace-settings-item">
-									<input type="checkbox" class="ace ace-checkbox-2 ace-save-state"
-										id="ace-settings-sidebar" autocomplete="off" />
-									<label class="lbl" for="ace-settings-sidebar"> Fixed Sidebar</label>
-								</div>
-
-								<div class="ace-settings-item">
-									<input type="checkbox" class="ace ace-checkbox-2 ace-save-state"
-										id="ace-settings-breadcrumbs" autocomplete="off" />
-									<label class="lbl" for="ace-settings-breadcrumbs"> Fixed Breadcrumbs</label>
-								</div>
 
 								<div class="ace-settings-item">
 									<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-rtl"
@@ -252,85 +108,18 @@
 								</div>
 							</div><!-- /.pull-left -->
 
-							<div class="pull-left width-50">
-								<div class="ace-settings-item">
-									<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-hover"
-										autocomplete="off" />
-									<label class="lbl" for="ace-settings-hover"> Submenu on Hover</label>
-								</div>
-
-								<div class="ace-settings-item">
-									<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-compact"
-										autocomplete="off" />
-									<label class="lbl" for="ace-settings-compact"> Compact Sidebar</label>
-								</div>
-
-								<div class="ace-settings-item">
-									<input type="checkbox" class="ace ace-checkbox-2" id="ace-settings-highlight"
-										autocomplete="off" />
-									<label class="lbl" for="ace-settings-highlight"> Alt. Active Item</label>
-								</div>
-							</div><!-- /.pull-left -->
 						</div><!-- /.ace-settings-box -->
 					</div><!-- /.ace-settings-container -->
 
 					<div class="page-header">
 						<div class="clearfix">
-							<form id="uploadForm" enctype="multipart/form-data">
+							<form enctype="multipart/form-data" method="post" action="upload.php">
 								<input  type="file" id="fileupload" name="uploadfile"/>
-								<button id="upload" type="button">upload</button>
+								属性：
+								<input  type="text" id="attr" name="attr"/>
+								<input id="upload" type="submit" value="Submit"/>
 							</form>
 					
-
-							<div data-toggle="buttons" class="btn-group btn-overlap btn-corner hide"
-								style="margin-left: 20px;">
-								<label class="btn btn-white btn-info">
-									<input type="checkbox" value="1">
-									<i class="icon-only ace-icon fa fa-link bigger-120"></i>
-									分享
-								</label>
-
-								<label class="btn btn-white btn-info">
-									<input type="checkbox" value="1">
-									<i class="icon-only ace-icon fa fa-download bigger-120"></i>
-									下载
-								</label>
-
-								<label class="btn btn-white btn-info">
-									<input type="checkbox" value="2">
-									<i class="icon-only ace-icon fa bigger-120"></i>
-									复制
-								</label>
-
-								<label class="btn btn-white btn-info">
-									<input type="checkbox" value="3">
-									<i class="icon-only ace-icon fa bigger-120"></i>
-									移动
-								</label>
-
-								<label class="btn btn-white btn-info">
-									<input type="checkbox" value="2">
-									<i class="icon-only ace-icon fa bigger-120"></i>
-									删除
-								</label>
-							</div>
-
-							<div class="pull-right">
-								<div id="toggle-result-format" class="btn-group btn-overlap" data-toggle="buttons">
-									<label title="" class="btn btn-lg btn-white btn-success" data-class="btn-success"
-										aria-pressed="true" data-original-title="Thumbnail view">
-										<input type="radio" value="1" autocomplete="off">
-										<i class="icon-only ace-icon fa fa-th"></i>
-									</label>
-
-									<label title="" class="btn btn-lg btn-white btn-grey active"
-										data-class="btn-primary" data-original-title="List view">
-										<input type="radio" value="2" checked="" autocomplete="off">
-										<i class="icon-only ace-icon fa fa-list"></i>
-									</label>
-								</div>
-
-							</div>
 						</div>
 					</div><!-- /.page-header -->
 
@@ -519,13 +308,12 @@
 			<div class="footer-inner">
 				<div class="footer-content">
 					<span class="bigger-120">
-						<span class="blue bolder">SecureCloud</span>
-						Application &copy; 2019-2020
+						<span class="blue bolder">CloudDataSystem</span>
 					</span>
 
 					&nbsp; &nbsp;
 					<span class="action-buttons">
-						<a href="#">
+						<a href="https://github.com/USTC-DataSecurity2021/CP-ABE-CloudDataSystem">
 							<i class="ace-icon fa fa-github-square light-black bigger-150"></i>
 						</a>
 					</span>
@@ -620,7 +408,7 @@
 
 		// 显示
 		jQuery(function ($) {
-			$('#display').click(function () {
+			$(document).ready(function(){ 
 
 				$.ajax({
 					type: "get",
@@ -645,20 +433,18 @@
 		jQuery(function ($) {
 			$('#upload').click(function () {
 
-				var attr = prompt("请输入属性：");	
+				var attr = new FormData($('#uploadForm')[1]);
 				var file = new FormData($('#uploadForm')[0]);
 				$.post("set.php", {'attr': attr},
    					function(data){
      					if(data.result == "success"){
-							
-
 							$.post("upload.php", {'file':file},function(res){
 								if(res.result ==  'success'){
 									alert("upload success");
 								}else{
 									alert("upload fail");
 								}
-							})
+							});
 						// $.ajax({
 						// 	type: "post",
 						// 	data: new FormData($('#uploadForm')[0]),
@@ -681,149 +467,7 @@
 
 
 	
-		$(document).ready(function () {
-			var token = document.cookie.split(";")[0];
-			console.log(token);
-			var head = {
-				"Authorization": "Bearer " + token
-			}
-			var data = {
-				"token": token,
-			}
-			$.ajax({
-				headers: head,
-				data: JSON.stringify(data),
-				//type、contentType必填,指明传参方式
-				type: "POST",
-				url: "/ecloud/files_onload",
-				contentType: "application/json;charset=utf-8",
-				success: function (response) {
-					//前端调用成功后，可以处理后端传回的json格式数据。
-					// response = JSON.parse(response);
-					if (response.success) {
-						console.log(response.folders);
-						console.log(response.files);
-						// var resList = response.res_list;
-						// var name = response.name;
-						// user_info.innerHTML = response.name + '-' + user_info.innerHTML;
-						var folders = response.folders;
-						var files = response.files;
-						for (var i = 0; i < folders.length; i++) { //遍历一下json数据
-							var tableList = "";
-							$.addTableAllFiles(tableList, folders[i], 0);
-						}
-						for (var i = 0; i < files.length; i++) { //遍历一下json数据
-							var tableList = "";
-							$.addTableAllFiles(tableList, files[i], 1);
-						}
-					}
-					else {
-						alert('登陆失败！');
-					}
-				}
-			});
-		})
-		$.addTableAllFiles = function(tableList, file, type) {
-			var img;
-			var name;
-			var size;
-			var updateTime;
-			//文件夹类型
-			if (type == 0) {
-				name = file.folder_name;
-				size = "-";
-				updateTime = file.folder_recent_update;
-				img = "img/ftype/folder.png";
-			}
-			else {//文件类型
-				name = file.file_name;
-				size = file.file_size;
-				updateTime = file.file_recent_update;
-			
-				var strs = name.split(".");
-				// img = "img/ftype/"+strs[1]+".png";
-				img = "img/"+strs[1]+".png";
-			}
-			tableList += '<tr role="row" class="odd">';
-			tableList += '<td style="display: table-cell; vertical-align: middle;" class="center">';
-			tableList += '<label class="pos-rel">';
-			tableList += '<input type="checkbox" class="ace">';
-			tableList += '<span class="lbl"></span>';
-			tableList += '</label>';
-			tableList += '</td>';
-			tableList += '<td>';
-			tableList += '<label class="pos-rel">';
-			tableList += '<img class="media-object" data-src="holder.js/40x40" alt="40x40" src="'+img+'" data-holder-rendered="true" style="width: 40px; height: 40px;">'
-			tableList += '</label>&nbsp;' + name;
-			tableList += '</td>';
-			tableList += '<td style="display: table-cell; vertical-align: middle;" class="hidden-480">' + size;
-			tableList += '</td>'
-			tableList += '<td style="display: table-cell; vertical-align: middle;">' + updateTime + '</td>';
-			tableList += '<td style="display: table-cell; vertical-align: middle;">'
-			tableList += '<div class="hidden-sm hidden-xs action-buttons">'
-			tableList += '<a class="grey" href="#">'
-			tableList += '<i class="ace-icon fa fa-link bigger-130">' + '</i>'
-			tableList += '</a>'
-			tableList += '<a class="blue" href="#">'
-			tableList += '<i class="ace-icon fa fa-download bigger-130"></i>'
-			tableList += '</a>'
-
-			tableList += '<a class="green" href="#">'
-			tableList += '<i class="ace-icon fa fa-pencil bigger-130"></i>'
-			tableList += '</a>'
-
-			tableList += '<a class="red" href="#">'
-			tableList += '<i class="ace-icon fa fa-trash-o bigger-130"></i>'
-			tableList += '</a>'
-			tableList += '</div>'
-
-			tableList += '<div class="hidden-md hidden-lg">'
-			tableList += '<div class="inline pos-rel">'
-			tableList += '<button class="btn btn-minier btn-yellow dropdown-toggle" data-toggle="dropdown" data-position="auto">'
-			tableList += '<i class="ace-icon fa fa-caret-down icon-only bigger-120"></i>'
-			tableList += '</button>'
-
-			tableList += '<ul class="dropdown-menu dropdown-only-icon dropdown-yellow dropdown-menu-right dropdown-caret dropdown-close">'
-			tableList += '<li>'
-			tableList += '<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">'
-			tableList += '<span class="grey">'
-			tableList += '<i class="ace-icon fa fa-link bigger-120"></i>'
-			tableList += '</span>'
-			tableList += '</a>'
-			tableList += '</li>'
-
-			tableList += '<li>'
-			tableList += '<a href="#" class="tooltip-info" data-rel="tooltip" title="" data-original-title="View">'
-			tableList += '<span class="blue">'
-			tableList += '<i class="ace-icon fa fa-download bigger-120"></i>';
-			tableList += '</span>'
-			tableList += '</a>'
-			tableList += '</li>'
-
-			tableList += '<li>'
-			tableList += '<a href="#" class="tooltip-success" data-rel="tooltip" title="" data-original-title="Edit">'
-			tableList += '<span class="green">'
-			tableList += '<i class="ace-icon fa fa-pencil-square-o bigger-120"></i>'
-			tableList += '</span>'
-			tableList += '</a>'
-			tableList += '</li>'
-
-			tableList += '<li>'
-			tableList += '<a href="#" class="tooltip-error" data-rel="tooltip" title="" data-original-title="Delete">'
-			tableList += '<span class="red">'
-			tableList += '<i class="ace-icon fa fa-trash-o bigger-120"></i>';
-			tableList += '</span>'
-			tableList += '</a>'
-			tableList += '</li>'
-			tableList += '</ul>'
-			tableList += '</div>'
-			tableList += '</div>'
-			tableList += '</td>'
-			tableList += '</tr>'
-
-			$('#tbody_list').append(tableList);
-		}
-	</script>
+</script>
 
 </body>
 
