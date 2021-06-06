@@ -4,7 +4,7 @@
 <head>
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 	<meta charset="utf-8" />
-	<title>SecureCloud - 登录</title>
+	<title> CloudDataSystem - 登录</title>
 
 	<meta name="description" content="User login page" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
@@ -45,7 +45,7 @@
 						<div class="center">
 							<h1>
 								<i class="ace-icon fa fa-leaf green"></i>
-								<span class="red">SecureCloud</span>
+								<span class="red"> CloudDataSystem</span>
 								<span class="grey" id="id-text2">云盘</span>
 							</h1>
 							<h4 class="blue" id="id-company-text">&copy; zly</h4>
@@ -123,12 +123,7 @@
 									</div><!-- /.widget-main -->
 
 									<div class="toolbar clearfix">
-										<div>
-											<a href="#" data-target="#forgot-box" class="forgot-password-link">
-												<i class="ace-icon fa fa-arrow-left"></i>
-												忘记密码
-											</a>
-										</div>
+
 
 										<div>
 											<a href="#" data-target="#signup-box" class="user-signup-link">
@@ -197,7 +192,7 @@
 											<fieldset>
 												<label class="block clearfix">
 													<span class="block input-icon input-icon-right">
-														<input type="email" class="form-control" id="register_school" placeholder="学校" />
+														<input type="text" class="form-control" id="register_school" placeholder="学校" />
 														<i class="ace-icon fa fa-envelope"></i>
 													</span>
 												</label>
@@ -231,13 +226,7 @@
 													</span>
 												</label>
 
-												<label class="block">
-													<input type="checkbox" class="ace" />
-													<span class="lbl">
-														接受
-														<a href="#">用户须知</a>
-													</span>
-												</label>
+
 
 												<div class="space-24"></div>
 
@@ -373,8 +362,8 @@
 					}
 				});
 
-				var school = document.getElementById("register_school");
-				var id = document.getElementById("register_id");
+				var school = document.getElementById("register_school").value;
+				var id = document.getElementById("register_id").value;
 				$.get('attr.php?username='+name+'&school='+school+'&id='+id, function(data) {
 					if (data.result == "success"){
 						alert("id:"+data.id+"\n"+"pk:"+data.pk+"\n"+"sk:"+data.sk+"\n");
