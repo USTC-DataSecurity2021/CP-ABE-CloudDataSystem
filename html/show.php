@@ -14,8 +14,8 @@ foreach($data as $value){
 
 $file = array();
 foreach($fn as $value){
-    $tmp_path = '/resources/'.$value;
-    $file_path = ''.'/cfile';
+    $tmp_path = '/var/www/html/resources/'.$value;
+    $file_path = '/resources/'.$value.'/cfile';
     $fp_attr = fopen($tmp_path.'/attr', 'r');
     $attr = fread($fp_attr, 4096);
     fclose($fp_attr);
